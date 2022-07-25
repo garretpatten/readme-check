@@ -12,7 +12,7 @@ jobs:
 
       - name: Check README
         id: readmeCheckId
-        uses: garretpatten/readme-check@v1
+        uses: garretpatten/readme-check@v1.0
 
       - name: Get the output time
         run: echo "Timestamp: ${{ steps.readmeCheckId.outputs.time }}"
