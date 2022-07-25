@@ -1,0 +1,16 @@
+name: 'README Check'
+description: 'Validates README format'
+inputs:
+  readmePath:
+    description: 'The README path'
+    required: true
+    default: './README.md'
+outputs:
+  # TODO: Delete this
+  readmeData:
+    description: 'This is for debugging purposes'
+  time:
+    description: 'README check timestamp'
+runs:
+  using: 'node12'
+  main: 'readmeCheck.js'
