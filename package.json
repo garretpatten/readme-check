@@ -1,0 +1,27 @@
+{
+  "name": "readme-check",
+  "version": "1.0.0",
+  "description": "A GitHub Action to verify my preferred README format",
+  "main": "readmeCheck.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garretpatten/readme-check.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garretpatten/readme-check/issues"
+  },
+  "homepage": "https://github.com/garretpatten/readme-check#readme",
+  "dependencies": {
+    "@actions/core": "^1.9.0",
+    "@actions/github": "^5.0.3",
+    "child_process": "^1.0.2",
+    "fs": "^0.0.1-security",
+    "xml2js": "^0.4.23"
+  }
+}
