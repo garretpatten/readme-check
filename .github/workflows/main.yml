@@ -1,0 +1,16 @@
+on: push
+
+jobs:
+  readme-check-job:
+    runs-on: ubuntu-latest
+    name: A job to check README format
+    steps:
+      - name: README check
+        id: readmeCheckId
+        uses: garretpatten/readme-check@v1
+      - name: Get the output time
+        run: echo "Timestamp: ${{ steps.readmeCheckId.outputs.time }}"
+      - name: Get the readme data
+        run: |
+          echo "readme data"
+          echo steps.readmeCheckId.outputs.readmeData
