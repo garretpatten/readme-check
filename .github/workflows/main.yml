@@ -1,3 +1,5 @@
+name: "readme-check-workflow"
+
 on: push
 
 jobs:
