@@ -1,17 +1,22 @@
-name: "readme-check-workflow"
+name: readme-check Workflow
 
 on: push
 
 jobs:
-  readme-check-job:
+  build:
+    name: readme-check Job
     runs-on: ubuntu-latest
-    name: A job to check README format
     steps:
-      - name: README check
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Check README
         id: readmeCheckId
         uses: garretpatten/readme-check@v1
+
       - name: Get the output time
         run: echo "Timestamp: ${{ steps.readmeCheckId.outputs.time }}"
+
       - name: Get the readme data
         run: |
           echo "readme data"
