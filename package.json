@@ -2,9 +2,9 @@
   "name": "readme-check",
   "version": "1.0.0",
   "description": "A GitHub Action to verify my preferred README format",
-  "main": "readmeCheck.js",
+  "main": "src/action.js",
   "scripts": {
-    "build": "ncc build index.js --minify",
+    "build": "ncc build src/action.js --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,8 +12,8 @@
     "url": "git+https://github.com/garretpatten/readme-check.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Garret Patten",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/garretpatten/readme-check/issues"
   },

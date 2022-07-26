@@ -1,4 +1,4 @@
-name: "readme-check Workflow"
+name: 'readme-check Workflow'
 
 on:
   push:
@@ -22,6 +22,5 @@ jobs:
 
       - name: Get the output time
         run: |
+          echo "README check has completed"
           echo "Timestamp: ${{ steps.readmeCheckId.outputs.time }}"
-          echo "readme data"
-          echo steps.readmeCheckId.outputs.readmeData
