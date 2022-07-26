@@ -1,11 +1,8 @@
 name: "readme-check Workflow"
 
 on:
-  pullrequest:
-    branches: [ main ]
   push:
     branches: [ main ]
-  workflow_dispatch
 
 jobs:
   build:
