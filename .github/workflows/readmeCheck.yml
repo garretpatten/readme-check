@@ -1,23 +1,29 @@
-name: readme-check Workflow
+name: "readme-check Workflow"
 
-on: push
+on:
+  pullrequest:
+    branches: [ main ]
+  push:
+    branches: [ main ]
 
 jobs:
   build:
-    name: readme-check Job
+
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actoins/setup-node@v3
 
       - name: Check README
         id: readmeCheckId
         uses: garretpatten/readme-check@v1.0
 
       - name: Get the output time
-        run: echo "Timestamp: ${{ steps.readmeCheckId.outputs.time }}"
-
-      - name: Get the readme data
         run: |
+          echo "Timestamp: ${{ steps.readmeCheckId.outputs.time }}"
           echo "readme data"
           echo steps.readmeCheckId.outputs.readmeData
