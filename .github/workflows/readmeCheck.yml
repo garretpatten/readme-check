@@ -16,6 +16,9 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
 
+      - name: Install Node modules
+        run: npm i
+
       - name: Check README
         id: readmeCheckId
         uses: garretpatten/readme-check@v1.0
