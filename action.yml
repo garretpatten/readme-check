@@ -19,4 +19,4 @@ outputs:
 
 runs:
   using: 'node12'
-  main: 'readmeCheck.js'
+  main: './dist/index.js'
