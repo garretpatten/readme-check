@@ -1,5 +1,3 @@
-// TODO: Uncomment out readmePath input
-
 /* GitHub Dependencies */
 const core = require('@actions/core');
 const github = require('@actions/github');
@@ -7,14 +5,13 @@ const github = require('@actions/github');
 /* Node Dependencies */
 const fs = require('fs');
 
-// const INPUT_README_PATH = 'readmePath';
+const INPUT_README_PATH = 'readmePath';
 const OUTPUT_TIMESTAMP = 'time';
 
 console.log('Entering try block');
 
 try {
-	// const readmePath = core.getInput(INPUT_README_PATH);
-	const readmePath = 'README.md'
+	const readmePath = core.getInput(INPUT_README_PATH);
 
 	const readmeMetadata = fs.readFileSync(readmePath, 'utf8');
 	const fileLines = readmeMetadata.split('\n');
