@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-node@v3
 
       - name: Install Node modules
-        run: npm i -g
+        run: npm i --locaton=global
 
       - name: Check README
         id: readmeCheckId
