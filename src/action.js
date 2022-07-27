@@ -9,7 +9,8 @@ const fs = require('fs');
 const INPUT_README_PATH = 'readmePath';
 const OUTPUT_TIMESTAMP = 'time';
 
-const repoName = github.event.repository.name;
+// const repoName = github.event.repository.name;
+const repoName = 'readme-check';
 console.log(github.context);
 
 /* Validates the title of the README
