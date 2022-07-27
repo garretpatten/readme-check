@@ -10,8 +10,7 @@ const INPUT_README_PATH = 'readmePath';
 const OUTPUT_TIMESTAMP = 'time';
 
 // const repoName = github.event.repository.name;
-const repoName = 'readme-check';
-console.log(github.context);
+const repoName = github.context.payload.repository.full_name.split('/')[1];
 
 /* Validates the title of the README
  * which should be an image title or
