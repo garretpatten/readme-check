@@ -10,6 +10,7 @@ const INPUT_README_PATH = 'readmePath';
 const OUTPUT_TIMESTAMP = 'time';
 
 const repoName = github.event.repository.name;
+console.log(github.context);
 
 /* Validates the title of the README
  * which should be an image title or

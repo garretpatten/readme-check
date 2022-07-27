@@ -2,7 +2,7 @@ name: 'README Check'
 description: 'Validates README format'
 author: 'Garret Patten'
 
-## TODO: Add branding
+# TODO: Add branding
 
 inputs:
   GITHUB_TOKEN:
