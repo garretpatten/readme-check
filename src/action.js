@@ -7,9 +7,8 @@ const fs = require('fs');
 
 /* I/O */
 const INPUT_README_PATH = 'readmePath';
-const OUTPUT_TIMESTAMP = 'time';
+const OUTPUT_TIMESTAMP = 'timestamp';
 
-// const repoName = github.event.repository.name;
 const repoName = github.context.payload.repository.full_name.split('/')[1];
 
 /* Validates the title of the README

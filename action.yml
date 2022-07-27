@@ -14,7 +14,7 @@ inputs:
     default: 'README.md'
 
 outputs:
-  time:
+  timestamp:
     description: 'README check timestamp'
 
 runs:
