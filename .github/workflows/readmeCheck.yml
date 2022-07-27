@@ -19,7 +19,7 @@ jobs:
 
       - name: Check README
         id: readmeCheckId
-        uses: garretpatten/readme-check@v1.0
+        uses: garretpatten/readme-check@main
 
       - name: Get the output time
         run: |
