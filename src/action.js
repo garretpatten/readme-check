@@ -30,9 +30,6 @@ function validateTopLine(topLine) {
 			return;
 	}
 
-	console.log(topLine);
-	console.log(topLineSplit);
-	console.log(repoName);
 	core.setFailed('The top line of the README should contain a descriptive image or a top level markdown heading that matches the repository name');
 }
 
@@ -49,13 +46,7 @@ try {
 	const topLine = readmeLines[0];
 	validateTopLine(topLine);
 
-	// TODO: Process README content
-	for (let fileLine of readmeLines) {
-		console.log('LINE START');
-		console.log(fileLine);
-		console.log('LINE END');
-		console.log('');
-	}
+	// TODO: Add additional processing of README content
 
 	core.setOutput(
 		OUTPUT_TIMESTAMP,
