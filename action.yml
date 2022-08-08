@@ -1,5 +1,5 @@
 name: 'README Check'
-description: 'Validates README format'
+description: 'Checks for needed sections of README and validates content'
 author: 'Garret Patten'
 
 # TODO: Add branding

@@ -3,13 +3,13 @@ A GitHub Action to verify my preferred README format
 
 ## [ CODE UNDER ACTIVE DEVELOPMENT ]
 
-## TODO: Add Table of Contents
+## TODO: Table of Contents
 
-## TODO: Add Insallation
+## TODO: Insallation
 
 ## TODO: Add Usage
 
-## TODO: Add Related Efforts
+## TODO: Related Efforts
 
 ## Maintainers
 

@@ -11,12 +11,42 @@ const OUTPUT_TIMESTAMP = 'timestamp';
 
 const repoName = github.context.payload.repository.full_name.split('/')[1];
 
+// TODO: Define checks logic
+
+function checkTableOfContents() {
+
+}
+
+function checkInstallationSection() {
+
+}
+
+function checkUsageSection() {
+
+}
+
+function checkRelatedEffortsSection() {
+
+}
+
+function checkMaintainers() {
+
+}
+
+function checkContributingSection() {
+
+}
+
+function checkLicenseSection() {
+
+}
+
 /* Validates the title of the README
  * which should be an image title or
  * a top level markdown heading whose
  * title matches the repository name
  */
-function validateTopLine(topLine) {
+function checkTopLine(topLine) {
 	const topLineSplit = topLine.split(' ');
 
 	// Check for image title
@@ -43,10 +73,35 @@ try {
 		core.setFailed('The README file is empty.');
 	}
 
-	const topLine = readmeLines[0];
-	validateTopLine(topLine);
+	// Errors array will collect all failed checks
+	// to be surfaced in the final check failure.
+	// The action will pass on an empty errors array.
+	// This may need to be in the scope of the entire
+	// file to avoid passing it through to each check.
+	const errors = [];
 
-	// TODO: Add additional processing of README content
+	// TODO: Structure checks into an array
+	// of functions that are run on a map
+	// built out of the parsed readme data.
+	// All checks must take the same params
+	// for this approach to work.
+
+	const topLine = readmeLines[0];
+	checkTopLine(topLine);
+
+	checkTableOfContents();
+
+	checkInstallationSection();
+
+	checkUsageSection();
+
+	checkRelatedEffortsSection();
+
+	checkMaintainers();
+
+	checkContributingSection();
+
+	checkLicenseSection();
 
 	core.setOutput(
 		OUTPUT_TIMESTAMP,

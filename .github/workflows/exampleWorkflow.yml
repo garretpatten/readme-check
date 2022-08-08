@@ -1,6 +1,8 @@
 name: 'Example Workflow'
 
-on: push
+on:
+    pull_request: [ main ]
+    push: [ main ]
 
 jobs:
   build:
@@ -12,7 +14,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Check README
-        id: readmeCheckId
+        id: readmeCheck
         uses: garretpatten/readme-check@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -20,4 +22,4 @@ jobs:
       - name: Get the output time
         run: |
           echo "README check has completed"
-          echo "Timestamp: ${{ steps.readmeCheckId.outputs.timestamp }}"
+          echo "Timestamp: ${{ steps.readmeCheck.outputs.timestamp }}"
